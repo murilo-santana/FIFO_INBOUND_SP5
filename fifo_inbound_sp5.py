@@ -176,7 +176,7 @@ async def main():
             await page.wait_for_timeout(900000) 
 
             print("Baixando...")
-            async with page.expect_download(timeout=150000) as download_info:
+            async with page.expect_download(timeout=200000) as download_info:
                 await page.get_by_role("button", name="Baixar").first.click(force=True)
             
             download = await download_info.value
