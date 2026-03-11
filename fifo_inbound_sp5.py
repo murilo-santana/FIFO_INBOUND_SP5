@@ -173,7 +173,7 @@ async def main():
             await page.get_by_role("button", name="Confirmar").click(force=True)
             
             print("Aguardando geração do relatório...")
-            await page.wait_for_timeout(900000) 
+            await page.wait_for_timeout(1200000) 
 
             print("Baixando...")
             async with page.expect_download(timeout=200000) as download_info:
